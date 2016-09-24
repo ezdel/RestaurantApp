@@ -85,7 +85,7 @@
 	$("#submit").on("click", function(){
 
 	var customer = {
-		name: $('#name').val()rim(),
+		name: $('#name').val().trim(),
 		phone: $('#phone').val().trim(),
 		email: $('#email').val().trim(),
 		id: $('#id').val().trim()
@@ -94,9 +94,9 @@
 	// var URL = window.location.origin;
 	var URL = window.location.origin;
 
+	console.log(customer);
 
-
-    $.post(URL + "/api/tables", customer,
+    $.post(URL + "/api/new", customer,
 
     function(data){
 
