@@ -1,8 +1,10 @@
 
 
+
+
 $(".submit").on("click", function(){
 
-	var newCustomer = {
+	var customer = {
 		name: $('#name').val()rim(),
 		phone: $('#phone').val().trim(),
 		email: $('#email').val().trim(),
@@ -11,14 +13,16 @@ $(".submit").on("click", function(){
 
 	var URL = window.location.origin;
 
-    $.post(URL + "/api/tables", newCustomer,
+    $.post(URL + "/api/tables", customer,
 
     function(data){
+
+    	console.log(data);
 
     	if(data){
     		alert("Your reservation has been booked.")
     	}
-    	if(!data){
+    	if(!data) {
     		alert("You have been placed on the waiting list.")
     	}
 
@@ -31,4 +35,9 @@ $(".submit").on("click", function(){
 return false;
 
 });
+
+// we need to push to one api if not full, else we push to wait list
+// to determine if full, get request
+
+
 
