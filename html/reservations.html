@@ -57,12 +57,12 @@
 				<label for="">Unique ID</label>
 				<input type="text" class="form-control" id="id" placeholder="">
 			</div>
-
-		</form><br>
 						
 			<div class="text-left">
-				<button type="submit" class="btn btn-primary btn-md" id="addBtn"></span> Submit</button>
+				<button type="submit" class="btn btn-primary btn-md" id="submit"></span> Submit</button>
 			</div>
+
+			</form><br>
 		</div>
 	</div>
 
@@ -82,7 +82,7 @@
 
 <script type="text/javascript">
 
-	$(".submit").on("click", function(){
+	$("#submit").on("click", function(){
 
 	var customer = {
 		name: $('#name').val()rim(),
@@ -91,7 +91,10 @@
 		id: $('#id').val().trim()
 	};
 
+	// var URL = window.location.origin;
 	var URL = window.location.origin;
+
+
 
     $.post(URL + "/api/tables", customer,
 
