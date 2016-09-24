@@ -23,10 +23,10 @@ function waitList() {
 				var waitList = $("<div>");
 				waitList.addClass("holder");
 				waitList.attr('id', 'placeholder' + i+1)
-				$('#waitlist').append(waitList);
+				$('#waitlistSection').append(waitList);
 
 				var resNumber = i + 1;
-				$("#placeholder"+ i+1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
+				$("#tableSection"+ i+1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + waitlistData[i].customerID + "</h2>");
 			}
 		})
 }
