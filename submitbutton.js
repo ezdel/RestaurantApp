@@ -1,31 +1,32 @@
 
 
-	$(".submit").on("click", function(){
+$(".submit").on("click", function(){
 
-		var newCustomer = {
-			name: $.t('#name').val()rim(),
-			phone: $('#phone').val().trim(),
-			email: $('#email').val().trim(),
-			id: $('#id').val().trim()
-		};
+	var newCustomer = {
+		name: $('#name').val()rim(),
+		phone: $('#phone').val().trim(),
+		email: $('#email').val().trim(),
+		id: $('#id').val().trim()
+	};
 
-		var URL = window.location.origin;
+	var URL = window.location.origin;
 
-	    $.post(URL + "/api/tables", newCustomer,
-	    function(data){
+    $.post(URL + "/api/tables", newCustomer,
 
-	    	if(data){
-	    		alert("Your reservation has been booked.")
-	    	}
-	    	if(!data){
-	    		alert("You have been placed on the waiting list.")
-	    	}
+    function(data){
 
-    		$('#name').val("");
-			$('#phone').val("");
-			$('#email').val("");
-			$('#id').val("");
-	    });
+    	if(data){
+    		alert("Your reservation has been booked.")
+    	}
+    	if(!data){
+    		alert("You have been placed on the waiting list.")
+    	}
+
+		$('#name').val("");
+		$('#phone').val("");
+		$('#email').val("");
+		$('#id').val("");
+    });
 
 return false;
 
