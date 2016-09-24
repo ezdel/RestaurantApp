@@ -54,7 +54,7 @@ app.get('/api/:customers?', function (req, res) {
 // Create New customers - takes in JSON input
 app.post('/api/new', function (req, res) {
 	var newcustomer = req.body;
-	newcustomer.routeName = newcustomer.name.replace(/\s+/g, '').toLowerCase();
+	// newcustomer.routeName = newcustomer.name.replace(/\s+/g, '').toLowerCase();
 
 	console.log(newcustomer);
 
