@@ -21,10 +21,10 @@
 	    		alert("You have been placed on the waiting list.")
 	    	}
 
-    		$('#reserve_name').val("");
-			$('#reserve_phone').val("");
-			$('#reserve_email').val("");
-			$('#reserve_uniqueID').val("");
+    		$('#name').val("");
+			$('#phone').val("");
+			$('#email').val("");
+			$('#id').val("");
 	    });
 
 return false;
