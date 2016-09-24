@@ -19,8 +19,8 @@
 		<div class="container">
   			<h1>Come and Git It.</h1>
   			<p>A restaurant where the food is bigger than the space.</p>
-  			<button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button>
-  			<button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span></button>
+  			<a class="btn btn-danger btn-lg" href="html/tables.html" role="button"><span class="glyphicon glyphicon-list-alt"></span> View Tables</a>
+  			<a class="btn btn-danger btn-lg" href="html/reservations.html" role="button"><span class="glyphicon glyphicon-cutlery"></span> Make Reservation</a>
 		</div>
 	</div>
 
@@ -45,17 +45,17 @@
 
 			<div class="form-group">
 				<label for="">Phone Number</label>
-				<input type="text" class="form-control" id="role" placeholder="">
+				<input type="text" class="form-control" id="number" placeholder="">
 			</div>
 
 			<div class="form-group">
 				<label for="">Email</label>
-				<input type="text" class="form-control" id="age" placeholder="">
+				<input type="text" class="form-control" id="email" placeholder="">
 			</div>
 
 			<div class="form-group">
 				<label for="">Unique ID</label>
-				<input type="text" class="form-control" id="forcepoints" placeholder="">
+				<input type="text" class="form-control" id="id" placeholder="">
 			</div>
 
 		</form><br>
@@ -68,6 +68,14 @@
 
 	</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<a href="http://restaurantApp.herokuapp.com/api/tables">API Table Link</a>
+			<a>|</a>
+			<a href="http://restaurantApp.herokuapp.com/api/reservations">API Wait List</a>
+		</div>
+	</div>
+
 	</div>
 </body>
 </html>
